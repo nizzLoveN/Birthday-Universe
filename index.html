@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Little Universe For You - Digital Birthday Experience">
+    <title>A Little Universe For You</title>
+    
+    <!-- Google Fonts untuk Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animation Container -->
+    <div id="ambient-canvas"></div>
+
+    <!-- Custom Music Player -->
+    <div class="music-player">
+        <audio id="bg-music" loop>
+            <source src="assets/music/song.mp3" type="audio/mpeg">
+        </audio>
+        <button id="play-btn" class="player-btn">
+            <svg viewBox="0 0 24 24" class="icon-play"><path d="M8 5v14l11-7z"/></svg>
+            <svg viewBox="0 0 24 24" class="icon-pause" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <div class="progress-container">
+            <div class="song-info">Now Playing - Our Song</div>
+            <div class="progress-bar-bg" id="progress-bg">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section" id="hero">
+        <div class="hero-content fade-up">
+            <div class="sparkles-container" id="hero-sparkles"></div>
+            <p class="subtitle">Sebuah Semesta Kecil Untukmu</p>
+            <h1 class="title">Selamat Ulang Tahun, <br><span class="highlight">Najla</span></h1>
+            <p class="romantic-text">Setiap detik yang berdetak adalah perayaan atas keberadaanmu.</p>
+            <button class="btn-primary" onclick="scrollToSection('story')">Mulai Perjalanan Kita</button>
+        </div>
+        <div class="scroll-indicator">
+            <p>Scroll perlahan</p>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <!-- DIGITAL LOVE STORY SECTION -->
+    <section class="story-section" id="story">
+        <h2 class="section-title fade-up">Babak Cerita Kita</h2>
+        <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item fade-up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Awal Mengenal</h3>
+                    <p>Semuanya bermula dari momen sederhana yang tak pernah kusangka akan menjadi awal dari cerita terbaik dalam hidupku. Senyum pertamamu mengubah segalanya.</p>
+                </div>
+            </div>
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item fade-up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Kenangan Indah</h3>
+                    <p>Tawa, perjalanan tanpa arah, hingga obrolan larut malam. Setiap detiknya telah kupahat dalam ingatan sebagai harta karun yang paling berharga.</p>
+                </div>
+            </div>
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item fade-up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Momen Favorit</h3>
+                    <p>Bukan tempat mewah atau hal besar. Momen favoritku adalah saat kau menatapku, seolah aku adalah tempat paling aman untukmu pulang.</p>
+                </div>
+            </div>
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item fade-up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Harapan Masa Depan</h3>
+                    <p>Semoga langkah kita selalu beriringan. Apapun musim yang berganti, aku ingin tetap menjadi tangan yang selalu kau genggam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO MEMORY GALLERY -->
+    <section class="gallery-section" id="gallery">
+        <h2 class="section-title fade-up">Kanvas Kenangan</h2>
+        <p class="section-subtitle fade-up">Lima bingkai dari ribuan senyummu</p>
+        
+        <div class="gallery-grid">
+            <div class="polaroid fade-up delay-1">
+                <div class="img-container">
+                    <img src="assets/images/photo1.jpg" alt="Memory 1">
+                </div>
+                <div class="caption">Keindahan yang abadi</div>
+            </div>
+            <div class="polaroid fade-up delay-2">
+                <div class="img-container">
+                    <img src="assets/images/photo2.jpg" alt="Memory 2">
+                </div>
+                <div class="caption">Duniaku</div>
+            </div>
+            <div class="polaroid fade-up delay-3">
+                <div class="img-container">
+                    <img src="assets/images/photo3.jpg" alt="Memory 3">
+                </div>
+                <div class="caption">Senyum favoritku</div>
+            </div>
+            <div class="polaroid fade-up delay-4">
+                <div class="img-container">
+                    <img src="assets/images/photo4.jpg" alt="Memory 4">
+                </div>
+                <div class="caption">Tak tergantikan</div>
+            </div>
+            <div class="polaroid fade-up delay-5">
+                <div class="img-container">
+                    <img src="assets/images/photo5.jpg" alt="Memory 5">
+                </div>
+                <div class="caption">Selamanya</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROMANTIC QUOTES SECTION -->
+    <section class="quotes-section" id="quotes">
+        <h2 class="section-title fade-up">Kata Untukmu</h2>
+        <div class="quotes-container fade-up" id="quotes-container">
+            <!-- Dihasilkan otomatis oleh JavaScript untuk performa -->
+        </div>
+    </section>
+
+    <!-- MINI GAME SECTION -->
+    <section class="game-section" id="game">
+        <h2 class="section-title fade-up">Collect The Hearts</h2>
+        <p class="game-desc fade-up">Tangkap 10 hati yang jatuh untuk membuka kejutan selanjutnya.</p>
+        <div class="game-board fade-up" id="game-board">
+            <div class="score-board">Skor: <span id="score">0</span> / 10</div>
+            <button id="start-game-btn" class="btn-primary">Mulai Main</button>
+            <div id="game-canvas"></div>
+            <!-- Game Reward -->
+            <div id="game-reward" class="hidden">
+                <h3>Kamu Berhasil!</h3>
+                <p>"Seperti kamu yang selalu berhasil menangkap hatiku."</p>
+                <button class="btn-secondary" onclick="scrollToSection('gift')">Buka Hadiahmu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SURPRISE GIFT SECTION -->
+    <section class="gift-section" id="gift">
+        <h2 class="section-title fade-up">Sebuah Kejutan</h2>
+        <div class="gift-container fade-up">
+            <div class="gift-box" id="gift-box">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+                <div class="gift-ribbon-v"></div>
+                <div class="gift-ribbon-h"></div>
+            </div>
+            <p class="gift-hint">Ketuk kotaknya</p>
+            
+            <div class="gift-message hidden" id="gift-message">
+                <h3>Terima Kasih</h3>
+                <p>Terima kasih sudah lahir ke dunia ini dan menjadi bagian terindah dalam hidupku.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LETTER SECTION -->
+    <section class="letter-section" id="letter">
+        <div class="envelope fade-up" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body">
+                <div class="wax-seal">💌</div>
+            </div>
+            <div class="letter-paper" id="letter-paper">
+                <h3>Untuk Kamu yang Paling Berharga,</h3>
+                <p>Selamat ulang tahun. Menulis ini membuatku menyadari betapa miskinnya kosa kata yang kumiliki untuk mendeskripsikan betapa berartinya dirimu bagiku.</p>
+                <p>Di usiamu yang baru ini, aku hanya ingin memastikan satu hal: bahwa kamu tidak akan pernah kehabisan cinta. Semoga hari-harimu dipenuhi oleh tawa yang melegakan, langkah yang diringankan, dan mimpi-mimpi yang perlahan menemukan jalannya menjadi nyata.</p>
+                <p>Terima kasih sudah bertahan, bertumbuh, dan mengizinkanku menjadi saksi atas keindahan jiwamu.</p>
+                <p class="signature">Dengan seluruh cintaku,<br><strong>Najla♡´･ᴗ･`♡</strong></p>
+            </div>
+        </div>
+        <p class="letter-hint fade-up">Buka Suratnya</p>
+    </section>
+
+    <!-- FOOTER & SECRET MESSAGE -->
+    <footer class="footer">
+        <p>Made with endless love.</p>
+        <!-- Secret Button (Subtle dot) -->
+        <div class="secret-trigger" id="secret-trigger">.</div>
+    </footer>
+
+    <!-- Secret Modal -->
+    <div class="secret-modal" id="secret-modal">
+        <div class="secret-content">
+            <h3>Rahasia Kecil</h3>
+            <p>"Dari semua semesta yang mungkin ada, aku paling bersyukur kita hidup di semesta yang sama. I love you, unconditionally."</p>
+            <button id="close-secret" class="btn-primary">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
